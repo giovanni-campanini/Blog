@@ -1,0 +1,31 @@
+<!-- ########################Header################################## -->
+
+<%- include ./partials/header.ejs -%>
+
+<!-- ########################Body################################## -->
+
+<h1>Home</h1>
+<p><%= startingContent %></p>
+
+<% posts.forEach( (element) => { %>
+    <h2><%= element.title %></h2>
+    <% if (element.content.length > 250) {   %>
+        <p><%= element.content.substr(0, 250) + "..." %> <a href="/posts/<%= element._id %>">Read more</a></p>  
+    <% } else {  %>
+        <p><%= element.content %></p>
+    <% };  %>
+
+<% }); %>
+
+
+
+
+
+
+
+
+
+<!-- ########################Footer################################## -->
+
+<%- include ./partials/footer.ejs -%>
+

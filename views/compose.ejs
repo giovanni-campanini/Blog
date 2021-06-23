@@ -1,0 +1,27 @@
+<!-- ########################Header################################## -->
+
+<%- include ./partials/header.ejs -%>
+
+<!-- ########################Body################################## -->
+<section id="compose">
+    <h1>Redactar</h1>
+
+    <form action="/compose" method="post">
+        <h3 class="compose-title">Titulo</h3>
+        <input type="text" name="composeTitle" class="compose-input">
+    
+        <h3 class="compose-title">Texto</h3>
+        <textarea name="composeBody" id="" cols="30" rows="5" class="compose-input"></textarea>
+    
+        <button type="submit" name="button" class="compose-button">Publicar</button>
+    </form>
+</section>
+
+
+
+
+
+
+<!-- ########################Footer################################## -->
+
+<%- include ./partials/footer.ejs -%>
